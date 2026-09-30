@@ -160,6 +160,19 @@ BMI = 몸무게 / 키의제곱
  평일이라면 차종(버스, 승용차) 입력!
  차종이 승용차라면 '단속!' 그렇지 않으면 '통과!'
 */
+// var day = Number(prompt('무슨 요일인지 숫자로 입력하세요 1.월 2.화  3.수  4.목  5.금  6.토  7.일'));
+
+// if (day <= 5) {
+//     var carJong = Number(prompt('1.버스      2.승용차'));
+//     if(carJong > 1) {
+//         alert('단속!');
+//     } else {
+//         alert('통과!');
+//     }
+// } else {
+//     alert('통과!');
+
+// }
 
 // Q) 공적마스크 구매 프로그램
 /*
@@ -173,3 +186,30 @@ BMI = 몸무게 / 키의제곱
     5,0: 금요일 구매 가능
  - 만 65이상 어르신은 언제든지 구매 가능하다.
 */
+
+var endBirthYear = Number(prompt('출생연도 끝자리 입력: '));
+var age = Number(prompt('나이 입력: '));
+
+if (age < 65) {
+    // 출생연도
+    if (endBirthYear === 1 || endBirthYear === 6) {
+        console.log('월요일 구매 가능!!');
+
+    } else if(endBirthYear === 2 || endBirthYear === 7) {
+        console.log('화요일 구매 가능!!');
+
+    } else if(endBirthYear === 3 || endBirthYear === 8) {
+        console.log('수요일 구매 가능!!');
+
+    } else if(endBirthYear === 4 || endBirthYear === 9) {
+        console.log('목요일 구매 가능!!');
+        
+    } else if(endBirthYear === 5 || endBirthYear === 0) {
+        console.log('금요일 구매 가능!!');
+        
+    }
+
+} else {
+    alert('언제든이 구매 가능합니다.');
+
+}
