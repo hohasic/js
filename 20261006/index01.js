@@ -23,7 +23,24 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     */
 
+    /*
     document.addEventListener('input', function(e) {
+
+        var colorPickerEle = document.querySelector('#colorPicker');
+        if(e.target === colorPickerEle) {
+
+            var changedColorValue = e.target.value;
+            colorTextEle.textContent = `${colorTextEleText}: ${changedColorValue}`;
+
+            var bodyEle = document.querySelector('body');
+            bodyEle.style.backgroundColor = changedColorValue;
+
+        }
+
+    });
+    */
+
+    document.addEventListener('input', (e) => {
 
         var colorPickerEle = document.querySelector('#colorPicker');
         if(e.target === colorPickerEle) {
