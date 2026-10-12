@@ -53,6 +53,17 @@ function addEvents() {
     listMenuBtn.addEventListener('click', function() {
         console.log('listMenuBtn CLICKED!!');
         
+        let myDiaries = [...searchDiaries(getCurrentSignInedMemberID())].reverse(); // []
+
+        let ulEle = document.querySelector('div.list_wrap > ul');
+        let liEles = '';
+        for (let i = 0; i < myDiaries.length; i++) {
+            liEles += `<li>${myDiaries[i]}</li>`;
+        }
+        console.log('liEles: ', liEles);
+
+        ulEle.innerHTML = liEles;
+
         showSelectedView(VIEW_NO.DIARY_LIST_VIEW);
 
     });
@@ -127,6 +138,9 @@ function addEvents() {
 
         let diary = document.querySelector('div.write_wrap input').value;
         addDiary(diary);
+        alert('DAIRY WRITE SUCCESS!!');
+
+        document.querySelector('div.write_wrap input').value = '';
 
     });
     /* FUNCTION BUTTON CLICK EVENT END */
